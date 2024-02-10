@@ -26,16 +26,32 @@
     <link rel="stylesheet" href="src/styles/style.css" />
   </head>
   <body class="body">
-    <div class="content-wrapper">
+    <div class="wrapper">
       <nav class="nav">
-        <img src="src/assets/logo.svg" alt="" class="nav__logo" />
+        <img
+          width="158"
+          height="33"
+          src="src/assets/logo.svg"
+          alt=""
+          class="nav__logo"
+        />
       </nav>
 
       <header class="header">
         <div class="header__hero-img-wrapper--mobile">
-          <img src="" alt="" class="header__hero-img--mobile" />
+          <img
+            src="src/assets/hero-mobile.jpg"
+            alt=""
+            class="header__hero-img--mobile"
+          />
         </div>
-        <h1 class="heading-title">We're coming soon</h1>
+        <h1 class="header-title">
+          We're
+          <span class="header-title__span"
+            >coming <br />
+            soon</span
+          >
+        </h1>
       </header>
 
       <main class="main">
@@ -45,8 +61,14 @@
           launch deals.
         </p>
         <form class="main__form" action="">
-          <input type="email" name="email" placeholder="Email Address" id="" />
-          <button type="submit">
+          <input
+            class="main__form__input"
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            id=""
+          />
+          <button class="main__form__btn" type="submit">
             <img src="src/assets/icon-arrow.svg" alt="" />
           </button>
         </form>
@@ -54,7 +76,11 @@
     </div>
 
     <div class="header__hero-img-wrapper--desktop">
-      <img src="" alt="" class="header__hero-img--desktop" />
+      <img
+        src="src/assets/hero-desktop.jpg"
+        alt=""
+        class="header__hero-img--desktop"
+      />
     </div>
     <script type="module" src="src/script.js"></script>
   </body>

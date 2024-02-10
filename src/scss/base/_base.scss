@@ -1,3 +1,123 @@
 body {
   font-family: $ff-primary;
 }
+
+.nav {
+  padding: 2rem;
+  display: $display-flex;
+  &__logo {
+    width: 6.25rem;
+  }
+}
+
+.header {
+  text-align: $text-align--center;
+  &-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 11px;
+    font-weight: $fw-300;
+    // display: $display-grid;
+    line-height: 1.05;
+    padding-block: 4rem 1rem;
+    &__span {
+      display: block;
+      font-weight: $fw-600;
+    }
+  }
+  &__hero-img-wrapper--desktop {
+    display: none;
+  }
+}
+
+.main {
+  display: $display-grid;
+  gap: 2rem;
+  padding: 0 2rem 6rem;
+  &__par {
+    font-size: $fs-primary;
+    line-height: 1.525;
+    text-align: $text-align--center;
+  }
+  &__form {
+    position: relative;
+    &__input {
+      inline-size: 100%;
+      padding: 0.7rem 1.4rem;
+      border: 1px solid black;
+      border-radius: 1.5rem;
+      &::placeholder {
+        font-size: $fs-primary;
+      }
+    }
+    &__btn {
+      position: absolute;
+      inset-inline-end: -2px;
+      inset-block-start: 50%;
+      cursor: pointer;
+      translate: 0 -50%;
+      padding: 0 1.6rem;
+      block-size: 100%;
+      border: 0;
+      border-radius: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 376px) {
+  .body {
+    display: flex;
+  }
+
+  .wrapper {
+    padding: 4rem 0;
+    // flex: 57.65%;
+    inline-size: 31.25rem;
+    margin: 0 auto;
+    padding-inline-end: 3.5rem;
+  }
+
+  .nav {
+    padding: 0;
+    &__logo {
+      width: 10rem;
+    }
+  }
+
+  .header {
+    text-align: $text-align--left;
+
+    &-title {
+      font-size: 4rem;
+      letter-spacing: 17px;
+      line-height: 1.06;
+      padding-block: 8.5rem 1.5rem;
+    }
+    &__hero-img-wrapper--mobile {
+      display: none;
+    }
+    &__hero-img-wrapper--desktop {
+      display: inline;
+    }
+  }
+
+  .main {
+    padding: 0;
+    gap: 2.5rem;
+    &__par {
+      text-align: $text-align--left;
+      font-size: $fs-primary-100;
+      line-height: 1.7;
+    }
+    &__form {
+      &__input {
+        padding: 1rem 1.4rem;
+        border-radius: 2rem;
+      }
+      &__btn {
+        border-radius: 2rem;
+        padding: 0 2.8rem;
+      }
+    }
+  }
+}

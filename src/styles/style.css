@@ -72,4 +72,115 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
+.nav {
+  padding: 2rem;
+  display: flex;
+}
+.nav__logo {
+  width: 6.25rem;
+}
+
+.header {
+  text-align: center;
+}
+.header-title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 11px;
+  font-weight: 300;
+  line-height: 1.05;
+  padding-block: 4rem 1rem;
+}
+.header-title__span {
+  display: block;
+  font-weight: 600;
+}
+.header__hero-img-wrapper--desktop {
+  display: none;
+}
+
+.main {
+  display: grid;
+  gap: 2rem;
+  padding: 0 2rem 6rem;
+}
+.main__par {
+  font-size: 0.89rem;
+  line-height: 1.525;
+  text-align: center;
+}
+.main__form {
+  position: relative;
+}
+.main__form__input {
+  inline-size: 100%;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid black;
+  border-radius: 1.5rem;
+}
+.main__form__input::placeholder {
+  font-size: 0.89rem;
+}
+.main__form__btn {
+  position: absolute;
+  inset-inline-end: -2px;
+  inset-block-start: 50%;
+  cursor: pointer;
+  translate: 0 -50%;
+  padding: 0 1.6rem;
+  block-size: 100%;
+  border: 0;
+  border-radius: 1.5rem;
+}
+
+@media (min-width: 376px) {
+  .body {
+    display: flex;
+  }
+  .wrapper {
+    padding: 4rem 0;
+    inline-size: 31.25rem;
+    margin: 0 auto;
+    padding-inline-end: 3.5rem;
+  }
+  .nav {
+    padding: 0;
+  }
+  .nav__logo {
+    width: 10rem;
+  }
+  .header {
+    text-align: left;
+  }
+  .header-title {
+    font-size: 4rem;
+    letter-spacing: 17px;
+    line-height: 1.06;
+    padding-block: 8.5rem 1.5rem;
+  }
+  .header__hero-img-wrapper--mobile {
+    display: none;
+  }
+  .header__hero-img-wrapper--desktop {
+    display: inline;
+  }
+  .main {
+    padding: 0;
+    gap: 2.5rem;
+  }
+  .main__par {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  .main__form__input {
+    padding: 1rem 1.4rem;
+    border-radius: 2rem;
+  }
+  .main__form__btn {
+    border-radius: 2rem;
+    padding: 0 2.8rem;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
