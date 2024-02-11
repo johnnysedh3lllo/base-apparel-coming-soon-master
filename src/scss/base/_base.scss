@@ -1,6 +1,10 @@
 body {
   font-family: $ff-primary;
+  // background: $clr-grad-100;
 }
+
+// .wrapper {
+// }
 
 .nav {
   padding: 2rem;
@@ -20,9 +24,11 @@ body {
     // display: $display-grid;
     line-height: 1.05;
     padding-block: 4rem 1rem;
+    color: $clr-red-100;
     &__span {
       display: block;
       font-weight: $fw-600;
+      color: $clr-red-300;
     }
   }
   &__hero-img-wrapper--desktop {
@@ -38,16 +44,20 @@ body {
     font-size: $fs-primary;
     line-height: 1.525;
     text-align: $text-align--center;
+    color: $clr-red-100;
   }
   &__form {
     position: relative;
     &__input {
       inline-size: 100%;
       padding: 0.7rem 1.4rem;
-      border: 1px solid black;
+      border: 1px solid;
+      border-color: $clr-red-100;
       border-radius: 1.5rem;
+      background: inherit;
       &::placeholder {
         font-size: $fs-primary;
+        color: $clr-red-100;
       }
     }
     &__btn {
@@ -60,6 +70,12 @@ body {
       block-size: 100%;
       border: 0;
       border-radius: 1.5rem;
+      background: $clr-grad-200;
+      will-change: filter;
+      transition: filter 300ms;
+      &:hover {
+        filter: drop-shadow(0 10px 0.75rem hsl(0, 80%, 86%));
+      }
     }
   }
 }
@@ -69,10 +85,18 @@ body {
     display: flex;
   }
 
+  .container {
+    // display: flex;
+    flex: 57.65%;
+
+    background: $clr-grad-100;
+    background: url("/src/assets/bg-pattern-desktop.svg") no-repeat 100%;
+    background-position: top right;
+  }
+
   .wrapper {
     padding: 4rem 0;
-    // flex: 57.65%;
-    inline-size: 31.25rem;
+    max-inline-size: min(100%, 31.25rem);
     margin: 0 auto;
     padding-inline-end: 3.5rem;
   }
