@@ -50,7 +50,7 @@ body {
     position: relative;
     &__input {
       inline-size: 100%;
-      padding: 0.7rem 1.4rem;
+      padding: 0.7rem 1.5rem;
       border: 1px solid;
       border-color: $clr-red-100;
       border-radius: 1.5rem;
@@ -79,9 +79,7 @@ body {
       background: $clr-grad-200;
       will-change: filter;
       transition: filter 300ms;
-      &:hover {
-        filter: drop-shadow(0 10px 0.75rem hsl(0, 80%, 86%));
-      }
+      filter: drop-shadow(0 10px 0.75rem hsl(0, 80%, 86%));
       &:active {
         filter: brightness(1.25);
       }
