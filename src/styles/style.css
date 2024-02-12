@@ -9,6 +9,10 @@
   padding: 0;
 }
 
+*:focus-visible {
+  outline: 1px solid black;
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role=list],
 ol[role=list] {
@@ -127,6 +131,12 @@ body {
   font-size: 0.89rem;
   color: hsl(0, 36%, 70%);
 }
+.main__form__input:user-invalid {
+  border-color: hsl(0, 93%, 68%);
+}
+.main__form__input:focus:user-invalid {
+  outline: none;
+}
 .main__form__btn {
   position: absolute;
   inset-inline-end: -2px;
@@ -146,6 +156,25 @@ body {
 }
 .main__form__btn:active {
   filter: brightness(1.25);
+}
+
+.error {
+  color: hsl(0, 93%, 68%);
+  font-size: 0.89rem;
+  position: absolute;
+  inset-inline-start: 6%;
+  inset-block-end: -63%;
+}
+.error.active {
+  padding: 0.3rem;
+}
+
+.error-icon {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 70%;
+  translate: 0 -50%;
+  display: none;
 }
 
 @media (min-width: 376px) {
@@ -198,9 +227,15 @@ body {
     padding: 1rem 1.4rem;
     border-radius: 2rem;
   }
+  .main__form__input::placeholder {
+    font-size: 1rem;
+  }
   .main__form__btn {
     border-radius: 2rem;
     padding: 0 2.8rem;
+  }
+  .error {
+    font-size: 1rem;
   }
 }
 

@@ -59,6 +59,12 @@ body {
         font-size: $fs-primary;
         color: $clr-red-100;
       }
+      &:user-invalid {
+        border-color: $clr-red-error;
+      }
+      &:focus:user-invalid {
+        outline: none;
+      }
     }
     &__btn {
       position: absolute;
@@ -81,6 +87,25 @@ body {
       }
     }
   }
+}
+
+.error {
+  color: $clr-red-error;
+  font-size: $fs-primary;
+  position: absolute;
+  inset-inline-start: 6%;
+  inset-block-end: -63%;
+  &.active {
+    padding: 0.3rem;
+  }
+}
+
+.error-icon {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 70%;
+  translate: 0 -50%;
+  display: none;
 }
 
 @media (min-width: 376px) {
@@ -140,11 +165,21 @@ body {
       &__input {
         padding: 1rem 1.4rem;
         border-radius: 2rem;
+        &::placeholder {
+          font-size: $fs-primary-100;
+        }
       }
       &__btn {
         border-radius: 2rem;
         padding: 0 2.8rem;
       }
     }
+  }
+
+  .error {
+    font-size: $fs-primary-100;
+    // &.active {
+    //   padding: 0.3rem;
+    // }
   }
 }

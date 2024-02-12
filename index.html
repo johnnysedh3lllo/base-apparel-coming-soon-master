@@ -62,19 +62,21 @@
             and our launch deals.
           </p>
 
-          <form class="main__form" action="">
+          <form class="main__form" action="" novalidate>
             <input
               class="main__form__input"
               type="email"
-              name="email"
+              name="mail"
               placeholder="Email Address"
-              id=""
+              id="mail"
+              required
             />
-            <button class="main__form__btn" type="submit">
+            <img class="error-icon" src="src/assets/icon-error.svg" alt="" />
+            <span class="error" aria-live="polite"></span>
+            <button class="main__form__btn">
               <img src="src/assets/icon-arrow.svg" alt="" />
             </button>
           </form>
-
         </main>
       </div>
     </div>
